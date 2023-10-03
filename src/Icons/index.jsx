@@ -1,9 +1,11 @@
+import React from "react";
 import * as Icons from "@icon-park/react";
 import { Icon } from "smilily";
+
 const IconsList = () => {
   let IconsKeys = [];
   const IconsNameKeys = [];
-  for (const key in Icons) {
+  for(const key in Icons) {
     IconsNameKeys.push(key);
   }
   IconsKeys = IconsNameKeys.slice(2650);
@@ -34,4 +36,4 @@ const IconsPage = () => (
   </div>
 );
 
-export default IconsPage
+export default IconsPage;
