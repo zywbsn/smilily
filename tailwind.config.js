@@ -31,7 +31,8 @@ module.exports = withMaterialColors(
   },
   {
     // primary: "#D1FAE5"
-    primary: "#fff1f0"
+    primary: "#fff1f0",
+    error: "#BA1A1A"
     // primary: "#4F46E5"
     // primary: "#6750A4"
   }
