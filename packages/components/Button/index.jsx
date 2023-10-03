@@ -25,13 +25,14 @@ const DisabledClass = {
 export default React.forwardRef((props, ref) => {
   const { children, type, onClick, className, icon, size, disabled, ...rest } = props;
   const Btn = rest.href ? "a" : "button";
-  const btnClass = (disabled ? DisabledClass[type] : TypeClass[type]) + className;
+  // const btnClass = (disabled ? DisabledClass[type] : TypeClass[type]) + className;
+  const btnClass = "px-3 py-1.5 rounded-full text-sm font-medium min-w-[90px] text-[#ffffff] bg-primary";
   return (
     <>
       <Btn
         {...rest}
         onClick={disabled ? null : onClick}
-        className=" text-[#C3C3C3] cursor-not-allowed "
+        className={btnClass}
       >
         {icon ? <Icon className="h-3 mr-1" name={icon} size={size || 14} /> : null}
         {children}
