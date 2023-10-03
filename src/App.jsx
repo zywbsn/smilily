@@ -22,6 +22,7 @@ export default () => {
         <div className="mb-3">
           <Button type="primary">smilily Button</Button>
           <Button type="error">smilily error</Button>
+          <Button type="error" disabled>smilily error disabled</Button>
 
         </div>
 
