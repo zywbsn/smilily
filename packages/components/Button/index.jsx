@@ -31,7 +31,7 @@ export default React.forwardRef((props, ref) => {
       <Btn
         {...rest}
         onClick={disabled ? null : onClick}
-        className={btnClass}
+        className=" text-[#C3C3C3] cursor-not-allowed "
       >
         {icon ? <Icon className="h-3 mr-1" name={icon} size={size || 14} /> : null}
         {children}
