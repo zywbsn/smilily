@@ -6,47 +6,26 @@ const PrimaryClass = BaseClass + " bg-primary hover:bg-primary/50 "
 const ErrorClass = BaseClass + " bg-error hover:bg-error/50 "
 const TextClass = BaseClass + " text-primary hover:bg-primary/50 "
 const TextErrorClass = BaseClass + " text-error hover:bg-primary/50 "
-const InfoClass = BaseClass + " bg-info-dark hover:bg-primary/50 "
-const SuccessClass = BaseClass + " bg-success-dark hover:bg-primary/50 "
 
-const getClassName = (type, disabled) => {
-  switch (type) {
-    case "primary":
-      return PrimaryClass;
-    case "error":
-      return ErrorClass;
-    case "text":
-      if (!disabled) {
-        return TextClass;
-      } else {
-        return " ";
-      }
-    case "text error":
-      if (!disabled) {
-        return TextErrorClass;
-      } else {
-        return " ";
-      }
-    case "info":
-      return InfoClass;
-    case "success":
-      return SuccessClass;
-  }
+const TypeClass = {
+  primary: PrimaryClass,
+  error: ErrorClass,
+  text: TextClass,
+  "text error": TextErrorClass
 };
 
-const getDisableClass = (type, disabled) => {
-  if (!["text", "text error"].includes(type) && disabled) {
-    return " bg-primary/50 text-[#C3C3C3] cursor-not-allowed ";
-  } else if (disabled) {
-    return " text-[#C3C3C3] cursor-not-allowed ";
-  }
+const DisabledClass = {
+  primary: " text-[#C3C3C3] cursor-not-allowed ",
+  error: " text-[#C3C3C3] cursor-not-allowed ",
+  text: " text-[#C3C3C3] cursor-not-allowed ",
+  "text error": " text-[#C3C3C3] cursor-not-allowed ",
 
 };
 
 export default React.forwardRef((props, ref) => {
   const { children, type, onClick, className, icon, size, disabled, ...rest } = props;
   const Btn = rest.href ? "a" : "button";
-  const btnClass = getClassName(type, disabled) + getDisableClass(type, disabled) + className;
+  const btnClass = (disabled ? DisabledClass[type] : TypeClass[type]) + className;
   return (
     <>
       <Btn
