@@ -27,7 +27,7 @@ export default () => {
 
         <div className="mb-3">
           <Button type="primary" href="https://www.baidu.com">smilily a</Button>
-          <Button type="primary" disabled href="https://www.baidu.com">smilily a</Button>
+          <Button type="primary" disabled href="https://www.baidu.com">smilily a disabled</Button>
         </div>
         <div className="mb-3">
           <Button type="text error" title="smilily title">smilily text error</Button>
