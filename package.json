@@ -1,9 +1,9 @@
 {
   "name": "smilily",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "license": "MIT",
   "author": "silenceLamb",
-  "description": "🌻 ✨ React smilily ui",
+  "description": "✨ React smilily ui 🌻",
   "files": [
     "lib/"
   ],
