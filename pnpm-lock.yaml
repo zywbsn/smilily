@@ -35,6 +35,9 @@ devDependencies:
   tailwind-material-colors:
     specifier: ^1.1.2
     version: 1.1.2(tailwindcss@3.3.3)
+  tailwind-variants:
+    specifier: ^0.1.14
+    version: 0.1.14(tailwindcss@3.3.3)
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
@@ -1391,12 +1394,26 @@ packages:
       tailwindcss: 3.3.3
     dev: true
 
+  /tailwind-merge@1.14.0:
+    resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
+    dev: true
+
   /tailwind-mode-aware-colors@1.2.4(tailwindcss@3.3.3):
     resolution: {integrity: sha512-Fb9CNWauNjBBMJFWvg2pVFFm9KsKjrsq15cIqFbifoIjA74khmUYBMLI6zeovwm0oDpEbrB4muX5QOx0JB5/mQ==}
     peerDependencies:
       tailwindcss: ^3.0.0
     dependencies:
       color: 4.2.3
+      tailwindcss: 3.3.3
+    dev: true
+
+  /tailwind-variants@0.1.14(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-qfOkSGP+cSolTTkJboldGmiM+w5uE77pazCRkwixEBsuaml9CmhN0E8qgH7QnZNmOTVSsgRK1tn/MsKOvOKVWA==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
+    dependencies:
+      tailwind-merge: 1.14.0
       tailwindcss: 3.3.3
     dev: true
 
