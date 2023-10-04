@@ -16,7 +16,7 @@
     "./style": "./lib/style.css"
   },
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite --host --port 3333",
     "build": "vite build",
     "build:lib": "vite build --mode lib",
     "preview": "vite preview --host"
