@@ -15,13 +15,13 @@ body {
 @layer base {
 	:root {
 		--color-primary: 255 179 170;
-		--color-on-primary: 255 255 255;
+		/* --color-on-primary: 255 255 255;
 		--color-primary-container: 111 247 246;
-		--color-on-primary-container: 0 32 32;
+		--color-on-primary-container: 0 32 32; */
 		--color-error: 224 26 26;
-		--color-on-error: 255 255 255;
+		/* --color-on-error: 255 255 255;
 		--color-error-container: 255 218 214;
-		--color-on-error-container: 65 0 2;
+		--color-on-error-container: 65 0 2; */
 	}
 }
 
