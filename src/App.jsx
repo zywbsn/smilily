@@ -3,8 +3,6 @@ import Layout from "./Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RouteList from "./RouteList";
 
-
-
 export default () => {
   return (
     <>

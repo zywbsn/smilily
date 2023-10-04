@@ -1,4 +1,4 @@
-const reg = /(?<=\/).*?(?=\/)/;
+// const reg = /(?<=\/).*?(?=\/)/;
 
 const componentsList = import.meta.glob("./pages/**/index.jsx", {
   eager: true
@@ -10,7 +10,7 @@ for (const key in componentsList) {
   const component = key.replace("router.jsx", "index.jsx");
   RouteList.push({
     name: pathName,
-    path: "/" + pathName,
+    path: "/Components/" + pathName,
     component: componentsList[component].default
   });
 }
