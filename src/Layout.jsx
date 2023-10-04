@@ -1,18 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
-import {
-  Button, Select, Radio, Icon, Menu, MenuItem, MenuGroup, MenuItemLink
-} from "smilily";
+import { Menu, MenuGroup, MenuItemLink } from "smilily";
 import Menus from "./Menu";
 
-console.log("Menus", Menus);
 
 export default () => {
-
-  const onItem = (val) => {
-    console.log("onItem", val);
-  };
-
   return (
     <>
       <div className="w-full h-14 bg-white">Header</div>

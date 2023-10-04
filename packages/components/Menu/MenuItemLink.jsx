@@ -8,7 +8,6 @@ const variants = tv({
 
 export default forwardRef((props, ref) => {
   const { to, className, children, ...rest } = props;
-  console.log("to", to);
   const [current, setCurrent] = useState();
   const [selectedCurrent, setSelectedCurrent] = useState();
   const onMouse = (children) => {
