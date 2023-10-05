@@ -1,11 +1,11 @@
-import React, { forwardRef, useState } from "react";
+import React, { useState } from "react";
 import { tv } from "tailwind-variants";
 
 const getClass = tv({
   base: "relative flex items-center h-14 pl-4 leading-normal cursor-pointer isolate"
 });
 
-export default forwardRef((props, ref) => {
+export default React.forwardRef((props, ref) => {
   const { className, children, ...rest } = props;
   const [current, setCurrent] = useState();
 

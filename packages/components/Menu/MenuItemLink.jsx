@@ -1,26 +1,21 @@
-import React, { forwardRef, useState } from "react";
+import React, { useState } from "react";
 import { tv } from "tailwind-variants";
 import { NavLink } from "react-router-dom";
 
-const variants = tv({
+const getClass = tv({
   base: "relative flex items-center h-14 pl-4 leading-normal cursor-pointer isolate"
 });
 
-export default forwardRef((props, ref) => {
+export default React.forwardRef((props, ref) => {
   const { to, className, children, ...rest } = props;
   const [current, setCurrent] = useState();
-  const [selectedCurrent, setSelectedCurrent] = useState();
-  const onMouse = (children) => {
-    if (children != selectedCurrent) setCurrent(selectedCurrent)
-  };
   return (
     <li
       ref={ref}
       {...rest}
-      className={variants({ className })}
+      className={getClass({ className })}
       onMouseOver={() => setCurrent(children)}
-      onMouseOut={() => onMouse(children)}
-      onClick={() => setSelectedCurrent(children)}
+      onMouseOut={() => setCurrent(undefined)}
     >
       <NavLink
         to={to}

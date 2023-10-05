@@ -1,19 +1,19 @@
-import React, { forwardRef, useState } from "react";
+import React, { useState } from "react";
 import { tv } from "tailwind-variants";
 import Icon from "../Icon";
 
 
-const variants = tv({
+const getClass = tv({
   base: "px-4 cursor-pointer relative isolate"
 });
 
-export default forwardRef((props, ref) => {
+export default React.forwardRef((props, ref) => {
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
   const { style, className, label, children, ...rest } = props;
 
   return (
-    <li ref={ref} {...rest} style={style} className={variants({ className })}>
+    <li ref={ref} {...rest} style={style} className={getClass({ className })}>
       <div
         className="h-14 flex items-center justify-between"
         onMouseOver={() => setHovered(true)}
