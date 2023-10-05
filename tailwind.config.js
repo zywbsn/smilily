@@ -27,11 +27,15 @@ module.exports = withMaterialColors(
         }
       }
     },
-    plugins: []
+    plugins: [],
+    corePlugins: {
+      // preflight: false // 禁止 tailwind css 默认属性
+    }
   },
   {
     // primary: "#D1FAE5"
-    primary: "#fff1f0"
+    primary: "#fff1f0",
+    disabled: "#EBEBEB"
     // error: "#BA1A1A"
     // primary: "#4F46E5"
     // primary: "#6750A4"

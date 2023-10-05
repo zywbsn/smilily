@@ -22,8 +22,19 @@ body {
 		/* --color-on-error: 255 255 255;
 		--color-error-container: 255 218 214;
 		--color-on-error-container: 65 0 2; */
+    --color-disabled: 205 205 205
 	}
 }
+
+input,select {
+  outline: none;
+}
+
+/* select {
+	appearance: none;
+	-moz-appearance:none; 
+	-webkit-appearance:none;  
+} */
 
 html {
   scroll-behavior: smooth;
