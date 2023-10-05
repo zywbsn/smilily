@@ -14,11 +14,11 @@ export default () => {
             if (item.children) return (
               <MenuGroup key={index} label={item.label}>
                 {item.children.map((child, idx) => (
-                  <MenuItemLink key={idx} to={"Components/" + item.label + "/" + child.label}>{child.label}</MenuItemLink>
+                  <MenuItemLink key={idx} to={item.label + "/" + child.label}>{child.label}</MenuItemLink>
                 ))}
               </MenuGroup>
             )
-            return <MenuItemLink key={index} to={"Components/" + item.label}>{item.label}</MenuItemLink>
+            return <MenuItemLink key={index} to={item.label}>{item.label}</MenuItemLink>
           })}
         </Menu>
         <div className="w-[calc(100vw-240px)] h-[calc(100vh-80px)] overflow-auto m-3 p-3 bg-white">
