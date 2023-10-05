@@ -1,15 +1,18 @@
 import React from "react";
 
-export default () => {
+export default React.forwardRef((props, ref) => {
+  console.log("props", props);
+  const { options } = props;
   return (
     <>
-      <select className="text-red-300 bg-green-600" name="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option>
-        <option value="aud">Aud</option>
+      <select className="bg-primary-dark min-w-[100px] rounded h-7 px-2">
+        {/* <select> */}
+        {options.map((item) => (
+          <option key={item.value} value={item.value} >
+            {item.label}
+          </option>
+        ))}
       </select>
     </>
   )
-};
+});
