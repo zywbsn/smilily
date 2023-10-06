@@ -2,6 +2,7 @@ export default [
   { label: "Button" },
   { label: "Input" },
   { label: "Select" },
+  { label: "Radio" },
   { label: "Icons" },
   { label: "Menu" },
   { label: "Tag" },
