@@ -12,13 +12,14 @@ const getClass = tv({
 });
 
 const Radio = React.forwardRef((props, ref) => {
-  const { label, className, disabled, ...rest } = props;
+  const { label, value, className, disabled, ...rest } = props;
 
   return (
     <>
       <label ref={ref} className="inline-block min-w-[100px]">
         <input {...rest} type="radio"
           className={getClass({ className, disabled })}
+          value={value}
           disabled={disabled}
         />
         <span>{label}</span>
@@ -32,7 +33,7 @@ const GroupItem = React.forwardRef((props, ref) => {
   return (
     <>
       {options.map((item, index) => (
-        <Radio key={index} name={name} {...rest} label={item.label ?? item} disabled={item.disabled ?? disabled} />
+        <Radio key={index} name={name} {...rest} label={item.label ?? item} value={item.value ?? item} disabled={item.disabled ?? disabled} />
       ))}
       {children}
     </>
