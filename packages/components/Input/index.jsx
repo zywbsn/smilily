@@ -12,6 +12,7 @@ export default React.forwardRef((props, ref) => {
       },
       prefix: {
         [prefix]: "pl-6 ",
+        undefined: "pl-2"
       }
     }
   });
